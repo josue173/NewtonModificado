@@ -14,21 +14,21 @@ public class NewtonModificado {
 
     public static void main(String[] args) {
         System.out.println("Ingrese el valor inicial: " );
-        double inicio = leer.nextDouble();
+        double inicio = leer.nextDouble(); // 3
         iterar(inicio);
         mostrar();
     }
     
     public static double funcion(double x){
-        return  Math.pow(x, 3) - Math.pow(Math.E, 2) + (6*x) - 24; // x^3 - e^2 + 6x - 24
+        return  3*Math.pow(x,2) - Math.pow(Math.E, x) + 7; // 3x^2 - e^x + 7
     }
     
     public static double primeraDerivada(double x) {
-        return Math.pow(3*x, 2) - 6; // 3x^2 - 6
+        return 6*x - Math.pow(Math.E, x); // 6x−e^x
     }
     
     public static double segundaDerivada(double x) {
-        return 6*x; // 6x
+        return 6-Math.pow(Math.E, x); // 6x
     }
     
     public static void iterar(double inicio) {
